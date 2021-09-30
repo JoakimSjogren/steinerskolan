@@ -1,17 +1,17 @@
-name: DIGITALOCEAN_DEPLOY 
- 
-on: 
-  push:
-    branches: [ main ]
+name: DIGITALOCEAN_DEPLOY
 
-jobs: 
+on:
+  push:
+    branches: [master]
+
+jobs:
   Build:
-    runs-on: self-hosted 
-     
-    steps: 
-      - uses: actions/checkout@main 
-      - name: Create .env 
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@main
+      - name: Create .env
         run: echo 'PORT=${{ secrets.PORT }}' > .env
 
-      - name: Run build 
+      - name: Run build
         run: docker-compose up -d
