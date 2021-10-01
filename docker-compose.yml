@@ -8,11 +8,11 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: wp
+      MYSQL_DATABASE: wordpresstest
       MYSQL_USER: root
       MYSQL_PASSWORD: password
     networks:
-      - wp
+      - wordpresstest
 
   wordpress:
     ports:
@@ -26,8 +26,8 @@ services:
       WORDPRESS_DB_USER: root
       WORDPRESS_DB_PASSWORD: password
     networks:
-      - wp
+      - wordpresstest
 networks:
-  wp:
+  wordpresstest:
 volumes:
   db_data:
