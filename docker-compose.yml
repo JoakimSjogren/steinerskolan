@@ -24,7 +24,7 @@ services:
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: password
+      # WORDPRESS_DB_PASSWORD: password
     networks:
       - wp
 networks:
