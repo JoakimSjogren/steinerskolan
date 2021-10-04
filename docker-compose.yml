@@ -9,7 +9,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: dbtest
-      # MYSQL_USER: root
+      MYSQL_USER: root
       MYSQL_PASSWORD: password
     networks:
       - wp
