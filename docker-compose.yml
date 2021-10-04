@@ -8,8 +8,8 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: wordpresstest
-      MYSQL_USER: root
+      MYSQL_DATABASE: dbtest
+      # MYSQL_USER: root
       MYSQL_PASSWORD: password
     networks:
       - wp
