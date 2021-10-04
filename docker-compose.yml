@@ -8,11 +8,11 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: wordpresstest
+      MYSQL_DATABASE: steinerskolan_db_1
       MYSQL_USER: root
       MYSQL_PASSWORD: password
     networks:
-      - wordpresstest
+      - steinerskolan_db_1
 
   wordpress:
     ports:
@@ -26,8 +26,8 @@ services:
       WORDPRESS_DB_USER: root
       WORDPRESS_DB_PASSWORD: password
     networks:
-      - wordpresstest
+      - steinerskolan_db_1
 networks:
-  wordpresstest:
+  steinerskolan_db_1:
 volumes:
   db_data:
